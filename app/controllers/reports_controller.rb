@@ -33,6 +33,9 @@ class ReportsController < ApplicationController
   def new
     #@report = Report.new({:reportTitle => "こんにちは",:user_id => current_user})
     @report = Report.new()
+    #@report.timespans.build
+    @report.worktimes.build
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @report }

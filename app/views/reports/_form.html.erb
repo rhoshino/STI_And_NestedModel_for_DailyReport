@@ -11,7 +11,16 @@
     </div>
   <% end %>
 
-
+<!--   <div class="field">
+    <%= f.fields_for :timespans do |t| %>
+      タイムスパン : <%= t.time_select :start_time %>
+    <% end %>
+  </div>
+ -->  <div class="field">
+    <%= f.fields_for :worktimes do |w| %>
+      ワークタイム : <%= w.time_select :start_time %>
+    <% end %>
+  </div>
 
   <div class="field">
     <%= f.label "題名" %><br />
